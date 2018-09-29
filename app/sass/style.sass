@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&subset=cyrillic-ext,latin-ext')
+@import _animations
+
+@font-face 
+	font-family: 'icomoon'
+	src:  url('../fonts/icomoon.eot?k7usjs')
+	src:  url('../fonts/icomoon.eot?k7usjs#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?k7usjs') format('truetype'), url('../fonts/icomoon.woff?k7usjs') format('woff'), url('../fonts/icomoon.svg?k7usjs#icomoon') format('svg')
+	font-weight: normal
+	font-style: normal
+
+[class^="icon-"], [class*=" icon-"]
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important
+  speak: none
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  text-transform: none
+  line-height: 1
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.icon-Facebook:before
+  content: "\e900"
+
+.icon-Instagram:before
+  content: "\e901"
+
+.icon-Twitter:before
+  content: "\e902"
+
+.icon-VK:before
+  content: "\e903"
+
+$color-scheme: #ffce55
+
+html, body, h1, h2, h3, h4, h5, h6, p, span, a, div, ul, ol
+	margin: 0
+	padding: 0
+
+h1, h2, h3, h4, h5, h6, p, span, a
+	font-family: Montserrat, sans-serif
+	font-weight: 400
+
+body
+	font-family: Montserrat, sans-serif
+	font-weight: 400
+.header
+	height: 100vh
+	min-width: 800px
+	width: 100%
+	align-items: center
+	background: url('../img/background.jpg') center center no-repeat
+	background-size: cover
+.navbar
+	height: 80px
+	min-width: 800px
+	width: 100%
+	display: flex
+	align-items: center
+	box-sizing: border-box
+	justify-content: space-between
+	position: fixed
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0))
+.logo
+	height: 58px
+	width: 25%
+	padding-left: 30px
+	box-sizing: border-box
+	flex-grow: 1
+.logo__link
+	height: inherit
+.logo__image
+	height: 58px
+.menu
+	width: 50%
+	list-style-type: none
+	display: flex
+	justify-content: center
+	align-items: center
+	height: inherit
+	flex-grow: 2
+.menu__item
+	margin-right: 25px
+	text-align: center
+	list-style-type: none
+	display: inline-block
+
+.menu__item:last-child
+	margin-right: 0px
+
+$menu__item__link-anitime: 200ms
+
+.menu__item__link
+	text-decoration: none	
+	font-family: Montserrat, sans-serif
+	font-size: 18px
+	text-align: center
+	color: #f6f7fb//rgba(246, 247, 251, 0.5)
+	text-shadow: 0 6px 30px rgba(0, 0, 0, 0.2)
+	transition: $menu__item__link-anitime
+
+.menu__item__link:hover
+	color: rgba(255,206,85,0.8)
+	transition: $menu__item__link-anitime
+
+.menu__item__link_active
+	color: rgba(255,206,85,0.8)
+
+.menu__login-bar
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	padding-right: 50px
+	box-sizing: border-box
+	width: 25%
+	flex-grow: 1
+
+.menu__login-bar > a
+	margin-right: 40px
+	text-decoration: none
+
+.menu__login-bar > a:last-child
+	margin-right: 0px
+
+.menu__reg
+	font-size: 16px
+	color: #f6f7fb
+	text-shadow: 0 6px 30px rgba(0, 0, 0, 0.2)
+	transition: $menu__item__link-anitime
+
+.menu__reg:hover
+	color: rgba(255,206,85,0.8)
+	transition: $menu__item__link-anitime
+
+
+$menu__login-bar__login-anitime: 400ms
+
+.menu__login
+	display: inline-block
+	text-align: center
+	line-height: 30px
+	width: 92px
+	min-width: 60px
+	height: 30px
+	border-radius: 15px
+	border: solid 2px #f6f7fb
+	font-size: 14px
+	color: #f6f7fb
+	margin-top: 2px
+	transition: $menu__login-bar__login-anitime
+
+.menu__login:hover
+	color: #000000
+	background: $color-scheme
+	border: 2px solid $color-scheme
+	transition: $menu__login-bar__login-anitime
+
+.fullscreen
+	min-width: 800px
+	height: 100vh
+	background: rgba(0,0,0,0.6)
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+.fullscreen__text
+	text-align: center
+	color: white
+	height: 314px
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: space-between
+
+.fullscreen__subheading
+	font-size: 24px
+
+.fullscreen__heading
+	text-transform: uppercase
+	font-size: 60px
+
+$fullscreen__button_anitime: 400ms
+
+.fullscreen__button
+	display: inline-block
+	margin-top: 80px
+	width: 172px
+	height: 60px
+	background-color: $color-scheme
+	box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.3)
+	font-family: Montserrat, sans-serif
+	font-size: 18px
+	text-align: center
+	color: black
+	text-decoration: none
+	line-height: 60px
+	transition: $fullscreen__button_anitime
+
+.fullscreen__button:hover
+	background-color: transparent
+	color: $color-scheme
+	box-shadow: 0px 1px 2px $color-scheme, 0px -1px 2px $color-scheme;
+	transition: $fullscreen__button_anitime
+
+.fullscreen__button:active
+	background-color: transparent
+	color: $color-scheme
+	box-shadow: 0 0 2px $color-scheme;
+
+.fullscreen__button_rounded
+	border-radius: 30px
+
+.bottom-container
+	display: flex
+	align-items: flex-end
+	justify-content: center
+	position: relative
+	top: 20%
+
+.bottom-container__link-scroll-down
+	width: 44px
+	height: 26px
+	animation: scrolldown-arrow-bounce 1s linear infinite
+
+.bottom-container__link-scroll-down__arrow
+	width: 44px
+	height: 26px
+.top-shops
+	display: flex
+	width: 100%
+	padding: 40px 5%
+	box-sizing: border-box
+	flex-wrap: wrap
+	justify-content: space-evenly
+.top-shops > .product
+	width: 20%
+	min-width: 250px
+	height: 250px
+	padding: 5px 5px
+	margin-bottom: 40px
+.product:nth-child(3n)
+	height: 250px
+.product > .card
+	border: 1px solid black
+	height: 240px
+	width: 100%
+	min-width: 200px
+	max-width: 240px
+.footer
+	height: 400px
+	width: 100%
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	box-sizing: border-box
+	padding: 0 20%
+.footer > .container
+	display: flex
+	width: 100%
+	height: 310px
+	align-items: flex-start
+	justify-content: space-between
+	box-sizing: border-box
+	padding-top: 66px
+.footer > .container > .column1-3
+	width: 20%
+	//display: flex
+	//flex-direction: column
+.footer__heading
+	font-family: Montserrat, sans-serif
+	font-size: 16px
+	color: #434a54
+	margin-bottom: 26px
+.footer__link
+	font-family: Montserrat, sans-serif
+	font-size: 12px
+	line-height: 24px
+	text-align: left
+	color: #aab2bd
+	text-decoration: none
+	font-weight: 400
+	display: inline-block
+.social
+	min-width: 165px
+.social__icon
+	text-decoration: none
+	font-size: 20px
+	border: 1px solid $color-scheme
+	border-radius: 18px
+	color: $color-scheme
+	box-sizing: border-box
+	padding: 8px
+	transition: $fullscreen__button_anitime
+.social__icon:hover
+	color: #fff
+	background: $color-scheme
+	transition: $fullscreen__button_anitime
+.copyright
+	width: 100%
+	height: 90px
+	display: flex
+	align-items: center
+	justify-content: center
+.copyright__text
+	font-family: Montserrat, sans-serif
+	font-size: 12px
+	color: #aab2bd
+
+
